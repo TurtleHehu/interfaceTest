@@ -83,4 +83,10 @@
         <module>product</module>
         <action>info</action>
     </url>
+
+    <url name="recommendData">
+        <group>api</group>
+        <module>mdd</module>
+        <action>recommendData</action>
+    </url>
 </interface>
