@@ -1,2 +1,0 @@
-java/.idea/workspace.xml doc/*.tmp *.xml
-.idea/workspace.xml
