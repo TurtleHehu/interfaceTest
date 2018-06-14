@@ -1,0 +1,13 @@
+[config]
+platformnmae = Andriod
+apppackage = asdasd
+appactivity = com.rowe.SplashActivity
+
+[cmd]
+viewphone = adb devices
+startserver = adb start-server
+stopserver = adb stop-server
+
+[log]
+log_erro = true
+
