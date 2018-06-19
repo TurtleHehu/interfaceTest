@@ -1,6 +1,7 @@
 # -*- encoding:utf-8-*-
 
 import configparser
+from datetime import datetime
 import os
 
 # 获取当前路径、配置文件全路径
@@ -40,3 +41,6 @@ if __name__ == '__main__':
     print(cf.getConfigValue(cf, "appPackage"))
     cf.setConfigValue(cf, "appPackage", "asdasd")
     print(cf.getConfigValue(cf, "appPackage"))
+    cf.setConfigValue(cf, "appPackage2", "asdasd")
+    print(cf.getConfigValue(cf, "appPackage2"))
+    print (str(datetime.now().strftime("%Y%m%d%H%M%S")))
