@@ -1,0 +1,136 @@
+test_add (learning.test_mathfunc.TestMathFunc)
+Test method add(a, b) ... ok
+test_divide (learning.test_mathfunc.TestMathFunc)
+Test method divide(a, b) ... ok
+test_minus (learning.test_mathfunc.TestMathFunc)
+Test method minus(a, b) ... ok
+test_multi (learning.test_mathfunc.TestMathFunc)
+Test method multi(a, b) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+test_add (learning.test_mathfunc.TestMathFunc)
+Test method add(a, b) ... ok
+test_divide (learning.test_mathfunc.TestMathFunc)
+Test method divide(a, b) ... FAIL
+test_minus (learning.test_mathfunc.TestMathFunc)
+Test method minus(a, b) ... ok
+test_multi (learning.test_mathfunc.TestMathFunc)
+Test method multi(a, b) ... ok
+
+======================================================================
+FAIL: test_divide (learning.test_mathfunc.TestMathFunc)
+Test method divide(a, b)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/guozhen/Documents/interfaceTest/learning/test_mathfunc.py", line 27, in test_divide
+    self.assertNotEqual(1.5,divide(3, 2))
+AssertionError: 1.5 == 1.5
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+test_add (learning.test_mathfunc.TestMathFunc)
+Test method add(a, b) ... ok
+test_divide (learning.test_mathfunc.TestMathFunc)
+Test method divide(a, b) ... FAIL
+test_minus (learning.test_mathfunc.TestMathFunc)
+Test method minus(a, b) ... ok
+test_multi (learning.test_mathfunc.TestMathFunc)
+Test method multi(a, b) ... ok
+
+======================================================================
+FAIL: test_divide (learning.test_mathfunc.TestMathFunc)
+Test method divide(a, b)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/guozhen/Documents/interfaceTest/learning/test_mathfunc.py", line 33, in test_divide
+    self.assertNotEqual(1.5,divide(3, 2))
+AssertionError: 1.5 == 1.5
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=1)
+test_add (learning.test_mathfunc.TestMathFunc)
+Test method add(a, b) ... ok
+test_divide (learning.test_mathfunc.TestMathFunc)
+Test method divide(a, b) ... FAIL
+test_minus (learning.test_mathfunc.TestMathFunc)
+Test method minus(a, b) ... ok
+test_multi (learning.test_mathfunc.TestMathFunc)
+Test method multi(a, b) ... ok
+
+======================================================================
+FAIL: test_divide (learning.test_mathfunc.TestMathFunc)
+Test method divide(a, b)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/guozhen/Documents/interfaceTest/learning/test_mathfunc.py", line 33, in test_divide
+    self.assertNotEqual(1.5,divide(3, 2))
+AssertionError: 1.5 == 1.5
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=1)
+test_add (learning.test_mathfunc.TestMathFunc)
+Test method add(a, b) ... ok
+test_divide (learning.test_mathfunc.TestMathFunc)
+Test method divide(a, b) ... FAIL
+test_minus (learning.test_mathfunc.TestMathFunc)
+Test method minus(a, b) ... ok
+test_multi (learning.test_mathfunc.TestMathFunc)
+Test method multi(a, b) ... ok
+
+======================================================================
+FAIL: test_divide (learning.test_mathfunc.TestMathFunc)
+Test method divide(a, b)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/guozhen/Documents/interfaceTest/learning/test_mathfunc.py", line 35, in test_divide
+    self.assertNotEqual(1.5,divide(3, 2))
+AssertionError: 1.5 == 1.5
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=1)
+test_add (learning.test_mathfunc.TestMathFunc)
+Test method add(a, b) ... ok
+test_divide (learning.test_mathfunc.TestMathFunc)
+Test method divide(a, b) ... FAIL
+test_minus (learning.test_mathfunc.TestMathFunc)
+Test method minus(a, b) ... ok
+test_multi (learning.test_mathfunc.TestMathFunc)
+Test method multi(a, b) ... ok
+
+======================================================================
+FAIL: test_divide (learning.test_mathfunc.TestMathFunc)
+Test method divide(a, b)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/guozhen/Documents/interfaceTest/learning/test_mathfunc.py", line 35, in test_divide
+    self.assertNotEqual(1.5,divide(3, 2))
+AssertionError: 1.5 == 1.5
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=1)
+test_add (learning.test_mathfunc.TestMathFunc)
+Test method add(a, b) ... ok
+test_divide (learning.test_mathfunc.TestMathFunc)
+Test method divide(a, b) ... skipped 'I do not want to run this case.'
+test_minus (learning.test_mathfunc.TestMathFunc)
+Test method minus(a, b) ... ok
+test_multi (learning.test_mathfunc.TestMathFunc)
+Test method multi(a, b) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK (skipped=1)
