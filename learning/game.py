@@ -19,5 +19,6 @@ while guess != int(secret):
         else:
             print("输入的值比我心里数字小")
         i = i+1
+    break
 
 print("game over！")
