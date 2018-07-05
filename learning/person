@@ -1,0 +1,7 @@
+# -*- coding: UTF-8 -*-
+
+class Person:
+    def __init__(self, name, age, website):
+        self.name = name
+        self.age = age
+        self.website = website
