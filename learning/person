@@ -1,7 +1,12 @@
 # -*- coding: UTF-8 -*-
+import requests
+
 
 class Person:
     def __init__(self, name, age, website):
         self.name = name
         self.age = age
         self.website = website
+
+person = Person('alex',11,'webs')
+print(person.name,person.age,person.website)
