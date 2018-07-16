@@ -40,3 +40,5 @@ print(str(custom_cookies_response.cookies))
 with open("百度.html","wb") as html:
     html.write(custom_cookies_response.content)
 html.close()
+
+post_Response = requests.po
