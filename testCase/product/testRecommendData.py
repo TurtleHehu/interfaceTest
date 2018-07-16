@@ -12,7 +12,7 @@ localConfigHttp = configHttp.ConfigHttp()
 
 @paramunittest.parametrized(*recommendData_xls)
 class RecommendData(unittest.TestCase):
-    def setParameters(self, case_name, method, token, mddId, type, result, errcode, msg):
+    def setParameters(self, case_name, method, token, mddId, type, result, errcode, msg, result_id):
         """
         set params
         :param case_name:
@@ -23,6 +23,7 @@ class RecommendData(unittest.TestCase):
         :param result:
         :param errcode:
         :param msg:
+        :param result_id:
         :return:
         """
         self.case_name = str(case_name)
@@ -31,10 +32,12 @@ class RecommendData(unittest.TestCase):
         self.mddId = str(mddId)
         self.type =  str(type)
         self.result = str(result)
-        self.errcode = str(errcode)
+        self.errcode = int(errcode)
         self.msg = str(msg)
+        self.result_id = int(result_id)
         self.response = None
         self.info = None
+
 
     def description(self):
         """
@@ -93,9 +96,8 @@ class RecommendData(unittest.TestCase):
 
         if self.result == '0':
             self.assertEqual(self.info['errcode'], self.errcode)
-            self.assertEqual(self.info['msg'], self.msg)
             mddId = common.get_value_from_return_json(self.info, "gonglveList", "id")
-            self.assertEqual(mddId, self.mddId)
+            self.assertEqual(mddId, self.result_id)
         if self.result == '1':
             self.assertEqual(self.info['errcode'], self.info['errcode'])
             self.assertEqual(self.info['msg'], self.msg)

@@ -9,9 +9,9 @@ localReadConfig = readConfig.ReadConfig()
 
 class Log:
     def __init__(self):
-        global logPath, resultPath, proDir
-        proDir = readConfig.proDir
-        resultPath = os.path.join(proDir, "result")
+        global logPath, resultPath, pro_Dir
+        pro_Dir = readConfig.pro_Dir
+        resultPath = os.path.join(pro_Dir, "result")
         if not os.path.exists(resultPath):
             os.mkdir(resultPath)
         logPath = os.path.join(resultPath, str(datetime.now().strftime("%Y%m%d%H%M%S")))
@@ -23,9 +23,11 @@ class Log:
         # defined handler
         handler = logging.FileHandler(os.path.join(logPath, "output.log"))
         # defined formatter
-        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        fmt = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+        formatter = logging.Formatter(fmt)
         handler.setFormatter(formatter)
         self.logger.addHandler(handler)
+
 
     def get_logger(self):
         """
