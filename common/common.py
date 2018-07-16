@@ -8,7 +8,7 @@ from common.Log import MyLog as Log
 import json
 
 localReadConfig = readConfig.ReadConfig()
-proDir = readConfig.proDir
+pro_Dir = readConfig.pro_Dir
 localConfigHttp = configHttp.ConfigHttp()
 log = Log.get_log()
 logger = log.get_logger()
@@ -46,9 +46,9 @@ def get_value_from_return_json(json, name1, name2):
     :param name2:
     :return:
     """
-    info = json['info']
+    info = json['data']
     group = info[name1]
-    value = group[name2]
+    value = group[0][name2]
     return value
 
 
@@ -73,7 +73,7 @@ def get_xls(xls_name, sheet_name):
     """
     cls = []
     # get xls file's path
-    xlsPath = os.path.join(proDir, "testFile", 'case', xls_name)
+    xlsPath = os.path.join(pro_Dir, "testFile", 'case', xls_name)
     # open xls file
     file = open_workbook(xlsPath)
     # get sheet by name
@@ -95,7 +95,7 @@ def set_xml():
     :return:
     """
     if len(database) == 0:
-        sql_path = os.path.join(proDir, "testFile", "SQL.xml")
+        sql_path = os.path.join(pro_Dir, "testFile", "SQL.xml")
         tree = ElementTree.parse(sql_path)
         for db in tree.findall("database"):
             db_name = db.get("name")
@@ -146,7 +146,7 @@ def get_url_from_xml(name):
     :return: url
     """
     url_list = []
-    url_path = os.path.join(proDir, 'testFile', 'interfaceURL.xml')
+    url_path = os.path.join(pro_Dir, 'testFile', 'interfaceURL.xml')
     tree = ElementTree.parse(url_path)
     for u in tree.findall('url'):
         url_name = u.get('name')

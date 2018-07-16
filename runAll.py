@@ -15,8 +15,8 @@ class AllTest:
         logger = log.get_logger()
         resultPath = log.get_report_path()
         on_off = localReadConfig.get_email("on_off")
-        self.caseListFile = os.path.join(readConfig.proDir, "caselist.txt")
-        self.caseFile = os.path.join(readConfig.proDir, "testCase")
+        self.caseListFile = os.path.join(readConfig.pro_Dir, "caselist.txt")
+        self.caseFile = os.path.join(readConfig.pro_Dir, "testCase")
         # self.caseFile = None
         self.caseList = []
         self.email = MyEmail.get_email()
