@@ -1,4 +1,5 @@
 product/testRecommendData
+#product/testRecommendData
 #user/testLogin
 #user/testRegister
 #user/testRegisterQuick
