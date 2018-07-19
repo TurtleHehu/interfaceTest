@@ -15,7 +15,6 @@ logger = log.get_logger()
 
 caseNo = 0
 
-
 def get_visitor_token():
     """
     create a token for visitor
@@ -28,7 +27,6 @@ def get_visitor_token():
     logger.debug("Create token:%s" % (token))
     return token
 
-
 def set_visitor_token_to_config():
     """
     set token that created for visitor to config
@@ -36,7 +34,6 @@ def set_visitor_token_to_config():
     """
     token_v = get_visitor_token()
     localReadConfig.set_headers("TOKEN_V", token_v)
-
 
 def get_value_from_return_json(json, name1, name2):
     """
@@ -51,7 +48,6 @@ def get_value_from_return_json(json, name1, name2):
     value = group[0][name2]
     return value
 
-
 def show_return_msg(response):
     """
     show msg detail
@@ -64,7 +60,6 @@ def show_return_msg(response):
     # 可以显示中文
     print("\n请求返回值："+'\n'+json.dumps(json.loads(msg), ensure_ascii=False, sort_keys=True, indent=4))
 # ****************************** read testCase excel ********************************
-
 
 def get_xls(xls_name, sheet_name):
     """
@@ -79,15 +74,14 @@ def get_xls(xls_name, sheet_name):
     # get sheet by name
     sheet = file.sheet_by_name(sheet_name)
     # get one sheet's rows
-    nrows = sheet.nrows
-    for i in range(nrows):
+    rows = sheet.nrows
+    for i in range(rows):
         if sheet.row_values(i)[0] != u'case_name':
             cls.append(sheet.row_values(i))
     return cls
 
 # ****************************** read SQL xml ********************************
 database = {}
-
 
 def set_xml():
     """
@@ -112,7 +106,6 @@ def set_xml():
                 table[table_name] = sql
             database[db_name] = table
 
-
 def get_xml_dict(database_name, table_name):
     """
     get db dict by given name
@@ -123,7 +116,6 @@ def get_xml_dict(database_name, table_name):
     set_xml()
     database_dict = database.get(database_name).get(table_name)
     return database_dict
-
 
 def get_sql(database_name, table_name, sql_id):
     """
@@ -137,7 +129,6 @@ def get_sql(database_name, table_name, sql_id):
     sql = db.get(sql_id)
     return sql
 # ****************************** read interfaceURL xml ********************************
-
 
 def get_url_from_xml(name):
     """

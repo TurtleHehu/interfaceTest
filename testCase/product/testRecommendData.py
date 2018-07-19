@@ -59,6 +59,7 @@ class RecommendData(unittest.TestCase):
         test body
         :return:
         """
+        self.logger.info("test start")
         # set uel
         self.url = common.get_url_from_xml('recommendData')
         localConfigHttp.set_url(self.url)
