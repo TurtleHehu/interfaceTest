@@ -2,7 +2,7 @@ import os
 import unittest
 from common.Log import MyLog as Log
 import readConfig as readConfig
-import HTMLTestRunner
+import HTMLTestRunnerCN
 from common.configEmail import MyEmail
 
 localReadConfig = readConfig.ReadConfig()
@@ -68,7 +68,7 @@ class AllTest:
             if suit is not None:
                 logger.info("********TEST START********")
                 fp = open(resultPath, mode='wb')
-                runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title='Test Report', description='Test Description')
+                runner = HTMLTestRunnerCN.HTMLTestReportCN(stream=fp, title='Test Report', description='Test Description')
                 runner.run(suit)
             else:
                 logger.info("Have no case to test.")

@@ -7,7 +7,7 @@ import json
 baiDu_response = requests.get('http://www.baidu.com')
 
 #发送无参数的get请求，设置超时时间timeout
-baiDu_response = requests.get('http://www.baidu.com', timeout=1)
+baiDu_response = requests.get('http://www.baidu.com', timeout=0.1)
 
 #查看请求的url地址
 print('无参数的get请求地址是：'+baiDu_response.url)
@@ -40,5 +40,3 @@ print(str(custom_cookies_response.cookies))
 with open("百度.html","wb") as html:
     html.write(custom_cookies_response.content)
 html.close()
-
-post_Response = requests.po

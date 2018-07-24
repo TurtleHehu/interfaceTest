@@ -48,9 +48,12 @@ class MyDB:
         """
         self.connectDB()
         # executing sql
-        self.cursor.execute(sql, params)
+        try:
+            self.cursor.execute(sql, params)
+            self.db.commit ()
+        except Exception as ex:
+            self.logger.error(str(ex))
         # executing by committing to DB
-        self.db.commit()
         return self.cursor
 
     def get_all(self, cursor):
@@ -59,6 +62,7 @@ class MyDB:
         :param cursor:
         :return:
         """
+        # 获取所有mysql执行结果
         value = cursor.fetchall()
         return value
 
@@ -68,6 +72,7 @@ class MyDB:
         :param cursor:
         :return:
         """
+        # 获取mysql执行完的第一条数据
         value = cursor.fetchone()
         return value
 
@@ -76,6 +81,7 @@ class MyDB:
         close database
         :return:
         """
+        # 关闭数据库操作，有开有关下次不难
         self.db.close()
         print("Database closed!")
 
