@@ -1,0 +1,4 @@
+2018-07-25 15:01:56,266 - logLearnning.py[line:24] - INFO: info
+2018-07-25 15:01:56,266 - logLearnning.py[line:25] - WARNING: warning
+2018-07-25 15:01:56,266 - logLearnning.py[line:26] - ERROR: error
+2018-07-25 15:01:56,267 - logLearnning.py[line:27] - CRITICAL: critical
