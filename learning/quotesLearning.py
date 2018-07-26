@@ -1,3 +1,5 @@
+import datetime
+
 sq1 = 'alex\' jim'
 dq1 = "alex,\ndadad"
 sq2 = 'alex "123" '
@@ -8,3 +10,4 @@ terry'''
 print(sq1)
 print(dq1)
 print(tq)
+print(datetime.datetime.now())
