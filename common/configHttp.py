@@ -1,3 +1,5 @@
+import os
+
 import requests
 import readConfig as readConfig
 from common.Log import MyLog as Log
@@ -8,9 +10,12 @@ localReadConfig = readConfig.ReadConfig()
 class ConfigHttp:
 
     def __init__(self):
-        global scheme, host, port, timeout
+        global scheme, schemes, bbs_host, www_host, net_host, port, timeout
         scheme = localReadConfig.get_http("scheme")
-        host = localReadConfig.get_http("baseurl")
+        schemes = localReadConfig.get_http("schemes")
+        bbs_host = localReadConfig.get_http("baseurl_bbs")
+        www_host = localReadConfig.get_http("baseurl_www")
+        net_host = localReadConfig.get_http ("baseurl_net")
         port = localReadConfig.get_http("port")
         timeout = localReadConfig.get_http("timeout")
         self.log = Log.get_log()
@@ -22,13 +27,29 @@ class ConfigHttp:
         self.files = {}
         self.state = 0
 
-    def set_url(self, url):
+    def set_bbs_url(self, url):
         """
         set url
         :param: interface url
         :return:
         """
-        self.url = scheme+'://'+host+url
+        self.url = schemes+'://'+bbs_host+url
+
+    def set_bbs_www(self, url):
+        """
+        set url
+        :param: interface url
+        :return:
+        """
+        self.url = scheme+'://'+www_host+url
+
+    def set_bbs_net(self, url):
+        """
+        set url
+        :param: interface url
+        :return:
+        """
+        self.url = scheme+'://'+net_host+url
 
     def set_headers(self, header):
         """
@@ -61,7 +82,7 @@ class ConfigHttp:
         :return:
         """
         if filename != '':
-            file_path = 'D:/python/interfaceTest/testFile/img/' + filename
+            file_path = os.path.join(os.path.split(os.getcwd())[0], 'testfile', 'img' , filename)
             self.files = {'file': open(file_path, 'rb')}
 
         if filename == '' or filename is None:

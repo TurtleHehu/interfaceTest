@@ -106,9 +106,4 @@ class MyLog:
 
         return MyLog.log
 
-if __name__ == "__main__":
-    log = MyLog.get_log()
-    logger = log.get_logger()
-    logger.debug("test debug")
-    logger.info("test info")
 
