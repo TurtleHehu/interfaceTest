@@ -26,7 +26,7 @@ class ReadConfig:
         value = self.cf.get("EMAIL", name)
         return value
 
-    def get_http(self, name):
+    def get_http(self, name: object) -> object:
         value = self.cf.get("HTTP", name)
         return value
 

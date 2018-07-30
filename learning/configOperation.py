@@ -9,7 +9,7 @@ proDir = os.path.split(os.path.realpath(__file__))[0]
 configPath = os.path.join(proDir, "config.ini")
 
 
-class ConfigOperation:
+class ConfigOperation():
     cf = configparser.ConfigParser()
     cf.read(configPath)
 
@@ -37,10 +37,10 @@ class ConfigOperation:
 
 
 if __name__ == '__main__':
-    cf = ConfigOperation
-    print(cf.getConfigValue(cf, "appPackage"))
-    cf.setConfigValue(cf, "appPackage", "asdasd")
-    print(cf.getConfigValue(cf, "appPackage"))
-    cf.setConfigValue(cf, "appPackage2", "asdasd")
-    print(cf.getConfigValue(cf, "appPackage2"))
+    cf = ConfigOperation()
+    print(cf.getConfigValue("appPackage"))
+    cf.setConfigValue("appPackage", "asdasd")
+    print(cf.getConfigValue("appPackage"))
+    cf.setConfigValue("appPackage2", "asdasd")
+    print(cf.getConfigValue("appPackage2"))
     print (str(datetime.now().strftime("%Y%m%d%H%M%S")))

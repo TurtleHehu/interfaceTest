@@ -2,5 +2,8 @@ def f(x):
     return x * x
 
 l = map(f,[1,2,3,4,5,6,7,8,9,10])
+list = []
+for i in l:
+    list.append(i)
 
-print(l)
+print(list)

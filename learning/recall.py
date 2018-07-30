@@ -3,6 +3,7 @@ import numpy as np
 
 from PIL import Image
 import matplotlib.image as mpimg
+import matplotlib.pyplot as plt
 
 # g.msgbox('欢迎',title='这仅仅是一个弹窗！')
 # choice = ['奥迪','捷豹']
@@ -12,6 +13,9 @@ import matplotlib.image as mpimg
 # img.show()
 # img.save('C:\\Users\\wildTurtle\\Desktop\\入职资料\\new.gif')
 
-lena = mpimg.imread('C:\\Users\\wildTurtle\\Desktop\\入职资料\\new.gif')
+lena = mpimg.imread('new.gif')
+print(lena.shape)
+plt.imshow(lena)
+plt.show()
 im = Image.fromarray(np.uint8(lena*255))
 im.show()

@@ -8,7 +8,7 @@ print(list)
 
 print('----------tuple----------')
 tuple = ("1",2,3)
-print(tuple.index('2'))
+print(tuple.index('1'))
 print("----------dict-----------")
 dict = {'michal': 12,"alex": 33}
 print(dict.keys())
@@ -22,3 +22,12 @@ print(s)
 s.add(6)
 print(s)
 print(s)
+tp = ('123',2)
+list = [1233]
+dict = {"key":"values"}
+st = set('123')
+
+print(type(tp))
+print(type(list))
+print(type(dict))
+print(type(st))

@@ -20,7 +20,7 @@ def get_visitor_token():
     create a token for visitor
     :return:
     """
-    host = localReadConfig.get_http("BASEURL")
+    host = localReadConfig.get_http("baseurl_www")
     response = requests.get(host+"/v2/User/Token/generate")
     info = response.json()
     token = info.get("info")

@@ -1,10 +1,15 @@
 import requests
 import json
+from bs4 import BeautifulSoup
+import lxml
 
 ##########################Get请求#######################
 
 # 发送无参数的get请求
 baiDu_response = requests.get('http://www.baidu.com')
+bf = BeautifulSoup(baiDu_response.text,'lxml',exclude_encodings="utf-8",from_encoding='uft-8')
+print(bf.prettify())
+print(bf.findall('link'))
 
 #发送无参数的get请求，设置超时时间timeout
 baiDu_response = requests.get('http://www.baidu.com', timeout=0.1)
