@@ -9,7 +9,7 @@ data = {'url':'http://www.youxiake.com','no':1, 'name':'wildTurtle'}
 json_data = json.dumps(data)
 print(data)
 print(json_data)
-print("###########################################")
+print("1111")
 data2 = json.loads(json_data)
 print(data2)
 print(data2['name'])
@@ -27,5 +27,5 @@ class Glob():
         print(file)
     print (dir)
 
-if __name__ == '__main__':
-    Glob()
+# if __name__ == '__main__':
+#     Glob()

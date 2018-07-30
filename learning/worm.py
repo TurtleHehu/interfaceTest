@@ -10,7 +10,7 @@ if not os.path.exists (img_dir):
 
 class GetImg ():
     def __init__(self):
-        global log,logger,result_path
+        global log,logger
         log = Log.get_log()
         logger=log.get_logger()
 
@@ -42,7 +42,7 @@ class GetImg ():
                         fb.write(r.content)
                     print("download successfully")
                 else:
-                    print("文件已存在")
+                    print("file exists")
             except Exception as ex:
                 print(str(ex))
             finally:

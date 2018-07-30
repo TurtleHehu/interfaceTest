@@ -6,11 +6,16 @@ import lxml
 ##########################Get请求#######################
 
 # 发送无参数的get请求
+<<<<<<< HEAD
 baiDu_response = requests.get('http://www.baidu.com')
 bf = BeautifulSoup(baiDu_response.text,'lxml',exclude_encodings="utf-8",from_encoding='uft-8')
 print(bf.prettify())
 print(bf.findall('link'))
+baiDu_response = requests.get('http://www.youxiake.com')
+# print(baiDu_response.text)
 
+bf = BeautifulSoup(baiDu_response.text,'lxml')
+print(bf.find_all(content="155324732761750113563757"))
 #发送无参数的get请求，设置超时时间timeout
 baiDu_response = requests.get('http://www.baidu.com', timeout=0.1)
 
