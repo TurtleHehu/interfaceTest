@@ -38,9 +38,9 @@ table       { font-size: 100%; }
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">api测试报告</h1>
 <p class='attribute'><strong>测试人员 : </strong> QA</p>
-<p class='attribute'><strong>开始时间 : </strong> 2018-07-24 11:29:43</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:00.103748</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 2，通过 2，通过率= 100.00%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2018-07-30 17:56:36</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:00.000998</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 4，通过 4，通过率= 100.00%</p>
 
 <p class='description'>测试情况</p>
 </div>
@@ -49,10 +49,10 @@ table       { font-size: 100%; }
 
 <p id='show_detail_line'>
 <a class="btn btn-primary" href='javascript:showCase(4)'>概要{ 100.00% }</a>
-<a class="btn btn-success" href='javascript:showCase(0)'>通过{ 2 }</a>
+<a class="btn btn-success" href='javascript:showCase(0)'>通过{ 4 }</a>
 <a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
 <a class="btn btn-warning" href='javascript:showCase(2)'>错误{ 0 }</a>
-<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 2 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 4 }</a>
 </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
 <colgroup>
@@ -74,15 +74,15 @@ table       { font-size: 100%; }
 
 <tr class='success'>
     <td>unittestLearn.MyTest</td>
-    <td class="text-center">2</td>
-    <td class="text-center">2</td>
+    <td class="text-center">4</td>
+    <td class="text-center">4</td>
     <td class="text-center">0</td>
     <td class="text-center">0</td>
-    <td class="text-center"><a href="javascript:showClassDetail('c1',2)" class="detail" id='c1'>详细</a></td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',4)" class="detail" id='c1'>详细</a></td>
 </tr>
 
 <tr id='pt1_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_run1</div></td>
+    <td class='passCase'><div class='testcase'>test_run0</div></td>
     <td colspan='5' align='center'>
     <!--默认收起output信息 -Findyou
     <button id='btn_pt1_1' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
@@ -103,7 +103,7 @@ pt1_1: 执行用例之前
 </tr>
 
 <tr id='pt1_2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_run</div></td>
+    <td class='passCase'><div class='testcase'>test_run1</div></td>
     <td colspan='5' align='center'>
     <!--默认收起output信息 -Findyou
     <button id='btn_pt1_2' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
@@ -115,6 +115,49 @@ pt1_1: 执行用例之前
     <pre>
     
 pt1_2: 执行用例之前
+执行用例之后
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_run2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起output信息 -Findyou
+    <button id='btn_pt1_3' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse">  -->
+
+    <!-- 默认展开output信息 -Findyou -->
+    <button id='btn_pt1_3' type="button"  class="btn-xs" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse in">
+    <pre>
+    
+pt1_3: 执行用例之前
+执行用例之后
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_run3</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起output信息 -Findyou
+    <button id='btn_pt1_4' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse">  -->
+
+    <!-- 默认展开output信息 -Findyou -->
+    <button id='btn_pt1_4' type="button"  class="btn-xs" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse in">
+    <pre>
+    
+pt1_4: 执行用例之前
+执行用例之后
 
 
     </pre>
@@ -124,8 +167,8 @@ pt1_2: 执行用例之前
 
 <tr id='total_row' class="text-center info">
     <td>总计</td>
-    <td>2</td>
-    <td>2</td>
+    <td>4</td>
+    <td>4</td>
     <td>0</td>
     <td>0</td>
     <td>通过率：100.00%</td>
@@ -219,33 +262,6 @@ function showClassDetail(cid, count) {
         }
         id_list[i] = tid;
         if (tr.className) {
-            toHide = 0;
-        }
-    }
-    for (var i = 0; i < count; i++) {
-        tid = id_list[i];
-        //修改点击无法收起的BUG，加入【详细】切换文字变化 --Findyou
-        if (toHide) {
-            document.getElementById(tid).className = 'hiddenRow';
-            document.getElementById(cid).innerText = "详细"
-        }
-        else {
-            document.getElementById(tid).className = '';
-            document.getElementById(cid).innerText = "收起"
-        }
-    }
-}
-
-function html_escape(s) {
-    s = s.replace(/&/g,'&amp;');
-    s = s.replace(/</g,'&lt;');
-    s = s.replace(/>/g,'&gt;');
-    return s;
-}
-</script>
-</body>
-</html>
-sName) {
             toHide = 0;
         }
     }

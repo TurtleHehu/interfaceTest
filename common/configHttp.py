@@ -3,7 +3,7 @@ import os
 import requests
 import readConfig as readConfig
 from common.Log import MyLog as Log
-import json
+
 
 localReadConfig = readConfig.ReadConfig()
 
