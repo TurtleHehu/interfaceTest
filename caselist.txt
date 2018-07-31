@@ -1,4 +1,5 @@
-product/testRecommendData
+channel/testGetChannelCn
+#product/testRecommendData
 #product/testRecommendData
 #user/testLogin
 #user/testRegister

@@ -6,7 +6,6 @@ import lxml
 ##########################Get请求#######################
 
 # 发送无参数的get请求
-<<<<<<< HEAD
 baiDu_response = requests.get('http://www.baidu.com')
 bf = BeautifulSoup(baiDu_response.text,'lxml',exclude_encodings="utf-8",from_encoding='uft-8')
 print(bf.prettify())

@@ -10,9 +10,10 @@ localReadConfig = readConfig.ReadConfig()
 class ConfigHttp:
 
     def __init__(self):
-        global scheme, schemes, bbs_host, www_host, net_host, port, timeout
+        global scheme, schemes, mini_host,bbs_host, www_host, net_host, port, timeout
         scheme = localReadConfig.get_http("scheme")
         schemes = localReadConfig.get_http("schemes")
+        mini_host = localReadConfig.get_http("baseurl_mini_app")
         bbs_host = localReadConfig.get_http("baseurl_bbs")
         www_host = localReadConfig.get_http("baseurl_www")
         net_host = localReadConfig.get_http ("baseurl_net")
@@ -27,6 +28,15 @@ class ConfigHttp:
         self.files = {}
         self.state = 0
 
+
+    def set_mini_url(self, url):
+        """
+        set url
+        :param: interface url
+        :return:
+        """
+        self.url = schemes+'://'+mini_host+url
+
     def set_bbs_url(self, url):
         """
         set url
@@ -35,7 +45,7 @@ class ConfigHttp:
         """
         self.url = schemes+'://'+bbs_host+url
 
-    def set_bbs_www(self, url):
+    def set_www_url(self, url):
         """
         set url
         :param: interface url
@@ -43,7 +53,7 @@ class ConfigHttp:
         """
         self.url = scheme+'://'+www_host+url
 
-    def set_bbs_net(self, url):
+    def set_net_url(self, url):
         """
         set url
         :param: interface url
